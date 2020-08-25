@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUrlShortener.DataAccess", "CustomUrlShortener.DataAccess\CustomUrlShortener.DataAccess.csproj", "{6716AE56-BE10-427E-B880-438D19D3040C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUrlShortener.WebApp", "CustomUrlShortener.WebApp\CustomUrlShortener.WebApp.csproj", "{E952F9FF-55F9-42C2-A5B2-87E96BF3904A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6716AE56-BE10-427E-B880-438D19D3040C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6716AE56-BE10-427E-B880-438D19D3040C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6716AE56-BE10-427E-B880-438D19D3040C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6716AE56-BE10-427E-B880-438D19D3040C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E952F9FF-55F9-42C2-A5B2-87E96BF3904A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E952F9FF-55F9-42C2-A5B2-87E96BF3904A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E952F9FF-55F9-42C2-A5B2-87E96BF3904A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E952F9FF-55F9-42C2-A5B2-87E96BF3904A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
