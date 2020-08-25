@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CustomUrlShortener.DataAccess.DataContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using CustomUrlShortener.DataAccess.DataContext;
+using CustomUrlShortener.Services;
 
 namespace CustomUrlShortener.WebApp
 {
@@ -26,6 +27,8 @@ namespace CustomUrlShortener.WebApp
         {
             services.AddDbContext<CustomUrlShortenerContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("CustomUrlShortenerConnection")));
+
+            services.AddScoped<IUrlShortenerService, UrlShortenerService>();
 
             services.AddControllersWithViews();
         }

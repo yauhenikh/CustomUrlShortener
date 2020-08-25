@@ -1,0 +1,38 @@
+﻿@model IEnumerable<UrlViewModel>
+@{
+    ViewData["Title"] = "List of URLs";
+}
+
+<h2>List of URLs</h2>
+
+<a class="btn btn-primary" asp-action="Create">Shorten URL</a>
+
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Long URL</th>
+            <th>Short URL</th>
+            <th>Created</th>
+            <th>Clicks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var url in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@url.LongURL" target="_blank">@url.URLToShow</a>
+                </td>
+                <td>
+                    <a class="short-url" href="@url.ShortURL" target="_blank">@url.ShortURL</a>
+                </td>
+                <td>@url.Created</td>
+                <td>@url.ClickNumber</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@url.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
